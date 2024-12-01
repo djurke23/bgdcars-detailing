@@ -1,0 +1,632 @@
+<!DOCTYPE html> 
+<html lang="rs"> 
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BGD Cars Detailing - 
+  Profesionalno detaljno čišćenje vozila u Beogradu. 
+  Operana vozila, zadovoljni klijenti, polirana i voskana vozila, 
+  unutrašnje čišćenje i detaljno čišćenje motora.">
+    
+
+  <title>BGD CARS Detailing</title>
+  
+  <!--Swiper CSS -->
+
+  <link rel="stylesheet" href="swiper-bundle.min.css" />
+
+  <!-- Boxicons CSS -->
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+  <link rel="icon" href="logomir.png" type="image/png">
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<!-- Fontawesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body> 
+
+  <header class="header"> 
+
+    <!-- naslov -->
+    <a href="index.html" class="logo">BGD CARS Detailing</a> 
+
+     <!-- navigacioni bar -->
+     <nav class="navbar">
+        <a href="index.html" style="--i:1;" class="active">Početna</a>
+        <a href="#o-nama" style="--i:2;">O nama</a>
+        <a href="usluge.html" style="--i:3;">Usluge</a>
+        <a href="cenovnik.html" style="--i:4;">Cenovnik</a>
+        <a href="#galerija" style="--i:5;">Galerija</a>
+        <a href="kontakt.html" style="--i:6;">Kontakt</a>  
+      </nav>
+
+    <!-- društvene mreže dugmici -->
+    <div class="social-media">
+      <a href="https://www.youtube.com/@bgdcars" style="--i:1;"><i class='bx bxl-youtube'></i></a>
+      <a href="https://www.tiktok.com/@bgdcars" style="--i:2;"><i class='bx bxl-tiktok'></i></a>
+      <a href="https://www.instagram.com/bgdcars/" style="--i:3;"><i class='bx bxl-instagram-alt'></i></a>
+
+
+
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+
+
+    </div>
+
+  </header>
+
+    
+
+
+
+    <style>
+        
+
+
+        :root {
+    --primary-color: #ff6b35;
+    --secondary-color: #f7c59f;
+    --accent-color: #2b2d42;
+    --text-color: #2b2d42;
+    --light-orange: #ffe0d1;
+}
+
+.logo i {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.container_cenovnik {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.services-grid-cenovnik {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolone sa jednakom širinom */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card-cenovnik {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-card-cenovnik.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card-cenovnik:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.service-card-cenovnik h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-card-cenovnik h3 i {
+    color: var(--primary-color);
+}
+
+.car-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.car-icon {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.car-icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.car-icon span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.price-table th, .price-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--light-orange);
+}
+
+.price-table th {
+    background: var(--primary-color);
+    color: white;
+}
+
+.price-table tr:hover {
+    background: var(--light-orange);
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.service-icon-cenovnik {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .services-grid-cenovnik {
+        grid-template-columns: 1fr; /* Samo 1 kolona na manjim ekranima */
+    }
+
+    .container-cenovnik {
+        padding: 1rem;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    
+
+<br><br><br><br><br><br><br><br><br>
+    
+<div class="services-container">
+    <div class="services-header">
+        <h2 class="services-title"> Cenovnik</h2>
+        <p class="services-subtitle">Dobrodošli u naš cenovnik usluga! 
+            Pružamo visokokvalitetne usluge auto detaljinga koje uključuju poliranje, 
+            keramičku zaštitu, čišćenje enterijera i eksterijera, dubinsko čišćenje, kao i polimerizaciju farova. 
+            Naš cilj je da vaš automobil izgleda kao nov, 
+            bilo da se radi o osnovnoj nezi ili vrhunskim tretmanima zaštite.</p>
+    </div>
+
+</div>
+
+    <div class="container-cenovnik">
+        <div class="services-grid-cenovnik">
+            <div class="service-card-cenovnik">
+                <div class="service-icon-cenovnik">
+                    <i class="fas fa-spray-can"></i>
+                </div>
+                <h3><i class=""></i> Poliranje automobila</h3>
+                <div class="car-icons">
+                    <div class="car-icon">
+                        <i class="fas fa-car"></i>
+                        <span>Mali auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-car-side"></i>
+                        <span>Srednji auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                        <span>Veliki auto</span>
+                    </div>
+                </div>
+                <table class="price-table">
+                    <tr>
+                        <th>Usluga</th>
+                        <th>Mali</th>
+                        <th>Srednji</th>
+                        <th>Veliki</th>
+                    </tr>
+                    <tr>
+                        <td>Jednoslojno</td>
+                        <td>130€</td>
+                        <td>150€</td>
+                        <td>180€</td>
+                    </tr>
+                    <tr>
+                        <td>Dvoslojno</td>
+                        <td>170€</td>
+                        <td>210€</td>
+                        <td>240€</td>
+                    </tr>
+                    <tr>
+                        <td>Troslojno</td>
+                        <td>230€</td>
+                        <td>270€</td>
+                        <td>300€</td>
+                    </tr>
+                    <tr>
+                        <td>Višeslojno</td>
+                        <td>280€</td>
+                        <td>330€</td>
+                        <td>360€</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="service-card-cenovnik">
+                <div class="service-icon-cenovnik">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3><i class=""></i> Keramička zaštita</h3>
+                <div class="car-icons">
+                    <div class="car-icon">
+                        <i class="fas fa-car"></i>
+                        <span>Mali auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-car-side"></i>
+                        <span>Srednji auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                        <span>Veliki auto</span>
+                    </div>
+                </div>
+                <table class="price-table">
+                    <tr>
+                        <th>Trajnost</th>
+                        <th>Mali</th>
+                        <th>Srednji</th>
+                        <th>Veliki</th>
+                    </tr>
+                    <tr>
+                        <td>12 meseci</td>
+                        <td>100€</td>
+                        <td>120€</td>
+                        <td>140€</td>
+                    </tr>
+                    <tr>
+                        <td>24 meseca</td>
+                        <td colspan="3" class="highlight">Od 250€</td>
+                    </tr>
+                    <tr>
+                        <td>36 meseci</td>
+                        <td colspan="3" class="highlight">Od 300€</td>
+                    </tr>
+                    <tr>
+                        <td>60 meseci</td>
+                        <td colspan="3" class="highlight">Od 400€</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="service-card-cenovnik">
+                <div class="service-icon-cenovnik">
+                    <i class="fas fa-shower"></i>
+                </div>
+                <h3><i class="fas fa-car-wash"></i> Detailing eksterijera</h3>
+                <div class="car-icons">
+                    <div class="car-icon">
+                        <i class="fas fa-car"></i>
+                        <span>Mali auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-car-side"></i>
+                        <span>Srednji auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                        <span>Veliki auto</span>
+                    </div>
+                </div>
+                <table class="price-table">
+                    <tr>
+                        <th>Tip vozila</th>
+                        <th>Cena</th>
+                    </tr>
+                    <tr>
+                        <td>Mali auto</td>
+                        <td>10€</td>
+                    </tr>
+                    <tr>
+                        <td>Srednji auto</td>
+                        <td>15€</td>
+                    </tr>
+                    <tr>
+                        <td>Veliki auto</td>
+                        <td>20€</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="service-card-cenovnik">
+                <div class="service-icon-cenovnik">
+                    <i class="fas fa-couch"></i>
+                </div>
+                <h3><i class=""></i> Detailing enterijera</h3>
+                <div class="car-icons">
+                    <div class="car-icon">
+                        <i class="fas fa-car"></i>
+                        <span>Mali auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-car-side"></i>
+                        <span>Srednji auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                        <span>Veliki auto</span>
+                    </div>
+                </div>
+                <table class="price-table">
+                    <tr>
+                        <th>Tip vozila</th>
+                        <th>Cena</th>
+                    </tr>
+                    <tr>
+                        <td>Mali auto</td>
+                        <td>30€</td>
+                    </tr>
+                    <tr>
+                        <td>Srednji auto</td>
+                        <td>45€</td>
+                    </tr>
+                    <tr>
+                        <td>Veliki auto</td>
+                        <td>60€</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="service-card-cenovnik">
+                <div class="service-icon-cenovnik">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Polimerizacija farova</h3>
+                <div class="car-icons">
+                    <div class="car-icon">
+                        <i class="fas fa-car"></i>
+                        <span>Mali auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-car-side"></i>
+                        <span>Srednji auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                        <span>Veliki auto</span>
+                    </div>
+                </div>
+                <table class="price-table">
+                    <tr>
+                        <th>Tip vozila</th>
+                        <th>Cena</th>
+                    </tr>
+                    <tr>
+                        <td>Bilo koji tip</td>
+                        <td>50€</td>
+                    </tr>
+                </table>
+            </div>
+
+            
+            <div class="service-card-cenovnik">
+                <div class="service-icon-cenovnik">
+                    <i class="fas fa-broom"></i>
+                </div>
+                <h3><i class="fas fa-vacuum-robot"></i> Dubinsko čišćenje</h3>
+                <div class="car-icons">
+                    <div class="car-icon">
+                        <i class="fas fa-car"></i>
+                        <span>Mali auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-car-side"></i>
+                        <span>Srednji auto</span>
+                    </div>
+                    <div class="car-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                        <span>Veliki auto</span>
+                    </div>
+                </div>
+                <table class="price-table">
+                    <tr>
+                        <th>Tip vozila</th>
+                        <th>Cena</th>
+                    </tr>
+                    <tr>
+                        <td>Mali auto</td>
+                        <td>100€</td>
+                    </tr>
+                    <tr>
+                        <td>Srednji auto</td>
+                        <td>120€</td>
+                    </tr>
+                    <tr>
+                        <td>Veliki auto</td>
+                        <td>140€</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <p class="services-subtitle">
+        Svaka usluga prilagođena je veličini vašeg vozila, a cene su jasno definisane kako biste unapred znali šta možete da očekujete. 
+        Pogledajte našu ponudu i odaberite tretman koji najbolje odgovara vašim potrebama!
+    </p>
+
+    <br><br><br><br><br>
+
+    <script>
+        function checkScroll() {
+            const cards = document.querySelectorAll('.service-card-cenovnik');
+            
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (cardTop < windowHeight - 100) {
+                    card.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('load', checkScroll);
+        window.addEventListener('scroll', checkScroll);
+
+        const tables = document.querySelectorAll('.price-table');
+        tables.forEach(table => {
+            const rows = table.querySelectorAll('tr');
+            rows.forEach(row => {
+                row.addEventListener('mouseover', () => {
+                    row.style.transition = 'background-color 0.3s ease';
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+<!-- newsletter -->
+
+
+
+
+
+
+<section class="newsletter-section">
+
+    <div class="newsletter-container">
+       <div class="newsletter-content">
+           <h2 class="newsletter-title">Ostanite u toku sa najnovijim trendovima u auto detailingu!</h2>
+           <p class="newsletter-description">Prijavite se na naš newsletter i budite prvi koji će saznati o specijalnim ponudama, novim uslugama i ekskluzivnim savetima za održavanje vašeg vozila.</p>
+           <form class="newsletter-form">
+               <input type="email" placeholder="Vaša email adresa" class="newsletter-input" required>
+               <button type="submit" class="newsletter-button">Prijavite se</button>
+           </form>
+       </div>
+       <div class="newsletter-image">
+           <img src="slike/news.png" alt="Auto detailing ilustracija">
+       </div>
+    </div>
+    </section>
+    
+    
+    <br><br><br><br><br><br>
+    
+
+
+
+
+  <!-- BACK TO TOP --> 
+
+    <!-- Glavno dugme -->
+    <button class="scroll-to-top" id="scrollBtn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+
+
+
+
+
+<!-- footer --> 
+
+<footer class="footer-container">
+   <div class="waves">
+       <div class="wave" id="wave1"></div>
+       <div class="wave" id="wave2"></div>
+       <div class="wave" id="wave3"></div>
+       <div class="wave" id="wave4"></div>
+   </div>
+   
+   <div class="footer-content">
+       <div class="footer-section">
+           <h3>O Nama</h3>
+           <p>Vaš partner za besprekornu čistoću i zaštitu automobila.</p>
+           <div class="social-icons">
+               <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
+               <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+               <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+           </div>
+       </div>
+       
+       <div class="footer-section">
+           <h3>Kontakt</h3>
+           <p>Adresa: Branka Radičevića 13, Beograd</p>
+           <p>Broj telefona: +381-(0)67/767-1862</p>
+           <p>Email: info@domain.com</p>
+           <p>Radno vreme: Pon - Ned: 07:00–19:00</p>
+
+       </div>
+       
+       <div class="footer-section">
+           <h3>Važne Stranice</h3>
+           <a href="#">Cenovnik</a>
+           <a href="#">Usluge</a>
+           <a href="#">FAQ</a>
+       </div>
+       
+       <div class="footer-section newsletter">
+           <h3>Newsletter</h3>
+           <p>Prijavite se na naš newsletter za redovne vesti!</p>
+           <div class="newsletter-form">
+               <input type="email" placeholder="Email Address">
+               <button type="submit"><ion-icon name="paper-plane-outline"></ion-icon></button>
+           </div>
+       </div>
+   </div>
+   
+   <div class="footer-bottom">
+       <p>&copy; Copyright 2024 BGDCARS DETAILING Sva prava zadržana | Made by <a href="https://djurke23.github.io/portfolio/">Djurke23.</a></p>
+   </div>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<script src="script.js"></script>
+
+</body> 
+</html>
